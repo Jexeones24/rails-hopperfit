@@ -21,8 +21,12 @@ class Hopper < ApplicationRecord
   end
 
   def choose_movements(movement_num)
-    byebug
     movement_objects_array = MOVEMENT_LIB["movements"].sample(movement_num).map { |obj| Movement.new(name: obj["name"], style: obj["style"], rep_range: obj["rep_range"]) }
+    self << movement_objects_array #need a way to give hopper object an array of movements
+  end
+
+  def assign_reps(movement_objects_array)
+    puts "we here now"
   end
 
 
@@ -30,18 +34,18 @@ class Hopper < ApplicationRecord
   # create x amount Movement.new
   # @movement_num.times do (choose movement randomly json)
   # Movement.new(params hash) ???
-  #
+  # when do we call reps method???
 
   def create_workout
     @workout = Workout.create(self)
   end
 
-  # def self.hoppify(time_domain)
-  #   movement_num = self.number_of_movements(time_domain)
-  #   self.choose_movements(movement_num)
-  #   self.each_movement(new_movements) #undefined local variable or method 'new_movements' for <#Class82493647836>
-  #   self.rep_range
-  # end
+  def self.hoppify(time_domain)
+    movement_num = self.number_of_movements(time_domain)
+    self.choose_movements(movement_num)
+    self.assign_reps(movement_objects_array)
+    self.create_workout
+  end
 
 
 end
