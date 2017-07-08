@@ -1,0 +1,2 @@
+class HoppersController < ApplicationController
+end
