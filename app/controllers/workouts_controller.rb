@@ -6,10 +6,11 @@ class WorkoutsController < ApplicationController
 
   def new
     @workout = Workout.new
+    @hopper = Hopper.new
   end
 
   def create
-    @workout = Workout.create(workout_params)
+    @workout = Workout.create
     redirect_to workout_path(@workout)
   end
 
@@ -17,9 +18,4 @@ class WorkoutsController < ApplicationController
     @workout = Workout.find_by(id: params[:id])
   end
 
-  private
-
-  def workout_params
-    params.require(:workout).permit(:name)
-  end
 end

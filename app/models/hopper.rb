@@ -1,5 +1,11 @@
 class Hopper < ApplicationRecord
-  belongs_to :user
   has_one :workout
   has_many :movements
+
+  def create_workout
+    @workout = Workout.new
+  end
 end
+
+#time_domain
+#workout_movements_id

@@ -7,5 +7,4 @@ class MovementsController < ApplicationController
   def show
     @movement = Movement.find_by(id: params[:id])
   end
-
 end
