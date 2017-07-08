@@ -3,7 +3,10 @@ class Workout < ApplicationRecord
   has_many :movements, through: :workout_movements
   has_many :users, through: :user_workout
 
-  # methods for packaging workout
+  # methods for packaging workout??
+  # view is responsible for displaying info!!
+
+
 end
 
 #gets hopper_id

@@ -1,0 +1,462 @@
+
+ {
+   "title":"Functional Movements Library",
+   "movements":[
+      {
+         "id":"1",
+         "name":"Back Squat",
+         "target_area":"lower_body",
+         "style":"weightlifting",
+         "demo_vid":[], "rep_range": "moderate"
+
+      },
+      {
+        "id":"2",
+        "name":"Front Squat",
+        "target_area":"lower_body",
+        "style":"weightlifting",
+        "demo_vid":[], "rep_range": "moderate"
+      },
+      {
+        "id":"3",
+        "name":"Overhead Squat",
+        "target_area":"full_body",
+        "style":"weightlifting",
+        "demo_vid":[], "rep_range": "moderate"
+      },
+      {
+        "id":"4",
+        "name":"Deadlift",
+        "target_area":"lower_body",
+        "style":"weightlifting",
+        "demo_vid":[], "rep_range": "moderate"
+      },
+      {
+        "id":"5",
+        "name":"Sumo Deadlift",
+        "target_area":"lower_body",
+        "style":"weightlifting",
+        "demo_vid":[], "rep_range": "low"
+      },
+      {
+        "id":"6",
+        "name":"Sumo Deadlift High Pull",
+        "target_area":"full_body",
+        "style":"weightlifting",
+        "demo_vid":[], "rep_range": "moderate"
+      },
+      {
+        "id":"7",
+        "name":"Dumbbell Deadlift",
+        "target_area":"lower_body",
+        "style":"odd_object",
+        "demo_vid":[], "rep_range": "high"
+      },
+      {
+        "id":"8",
+        "name":"Romanian Deadlift",
+        "target_area":"lower_body",
+        "style":"weightlifting",
+        "demo_vid":[], "rep_range": "low"
+      },
+      {
+        "id":"9",
+        "name":"Single-Leg Deadlift",
+        "target_area":"lower_body",
+        "style":"weightlifting",
+        "demo_vid":[], "rep_range": "low"
+      },
+      {
+        "id":"10",
+        "name":"Snatch Grip Deadlift",
+        "target_area":"full_body",
+        "style":"weightlifting",
+        "demo_vid":[], "rep_range": "low"
+      },
+      {
+        "id":"11",
+        "name":"Press",
+        "target_area":"upper_body",
+        "style":"weightlifting",
+        "demo_vid":[], "rep_range": "low"
+      },
+      {
+        "id":"12",
+        "name":"Bench Press",
+        "target_area":"upper_body",
+        "style":"weightlifting",
+        "demo_vid":[], "rep_range": "moderate"
+      },
+      {
+        "id":"13",
+        "name":"Push Press",
+        "target_area":"upper_body",
+        "style":"weightlifting",
+        "demo_vid":[], "rep_range": "moderate"
+      },
+      {
+        "id":"14",
+        "name":"Dumbbell Press",
+        "target_area":"upper_body",
+        "style":"odd_object",
+        "demo_vid":[], "rep_range": "low"
+      },
+      {
+        "id":"15",
+        "name":"Dumbbell Push Press",
+        "target_area":"upper_body",
+        "style":"odd_object",
+        "demo_vid":[], "rep_range": "high"
+      },
+      {
+        "id":"16",
+        "name":"Clean",
+        "target_area":"full_body",
+        "style":"weightlifting",
+        "demo_vid":[], "rep_range": "low"
+      },
+      {
+        "id":"17",
+        "name":"Power Clean",
+        "target_area":"full_body",
+        "style":"weightlifting",
+        "demo_vid":[], "rep_range": "moderate"
+      },
+      {
+        "id":"18",
+        "name":"Clean & Jerk",
+        "target_area":"full_body",
+        "style":"weightlifting",
+        "demo_vid":[], "rep_range": "low"
+      },
+      {
+        "id":"19",
+        "name":"Dumbbell Clean",
+        "target_area":"full_body",
+        "style":"odd_object",
+        "demo_vid":[], "rep_range": "high"
+      },
+      {
+        "id":"20",
+        "name":"Hang Clean",
+        "target_area":"full_body",
+        "style":"weightlifting",
+        "demo_vid":[], "rep_range": "moderate"
+      },
+      {
+        "id":"21",
+        "name":"Hang Power Clean",
+        "target_area":"full_body",
+        "style":"weightlifting",
+        "demo_vid":[], "rep_range": "high"
+      },
+      {
+        "id":"22",
+        "name":"Hang Clean & Jerk",
+        "target_area":"full_body",
+        "style":"weightlifting",
+        "demo_vid":[], "rep_range": "moderate"
+      },
+      {
+        "id":"23",
+        "name":"Hang Power Clean",
+        "target_area":"full_body",
+        "style":"weightlifting",
+        "demo_vid":[], "rep_range": "high"
+      },
+      {
+        "id":"24",
+        "name":"Snatch",
+        "target_area":"full_body",
+        "style":"weightlifting",
+        "demo_vid":[], "rep_range": "low"
+      },
+      {
+        "id":"25",
+        "name":"Power Snatch",
+        "target_area":"full_body",
+        "style":"weightlifting",
+        "demo_vid":[], "rep_range": "high"
+      },
+      {
+        "id":"26",
+        "name":"Hang Snatch",
+        "target_area":"full_body",
+        "style":"weightlifting",
+        "demo_vid":[], "rep_range": "moderate"
+      },
+      {
+        "id":"27",
+        "name":"Hang Power Snatch",
+        "target_area":"full_body",
+        "style":"weightlifting",
+        "demo_vid":[], "rep_range": "high"
+      },
+      {
+        "id":"28",
+        "name":"Dumbbell Snatch",
+        "target_area":"full_body",
+        "style":"odd_object",
+        "demo_vid":[], "rep_range": "high"
+      },
+      {
+        "id":"29",
+        "name":"Jerk",
+        "target_area":"upper-body",
+        "style":"weightlifting",
+        "demo_vid":[], "rep_range": "moderate"
+      },
+      {
+        "id":"30",
+        "name":"Kettlebell Swing",
+        "target_area":"full_body",
+        "style":"odd_object",
+        "demo_vid":[], "rep_range": "high"
+      },
+      {
+        "id":"31",
+        "name":"Kettlebell Turkish Get-up",
+        "target_area":"full_body",
+        "style":"odd_object",
+        "demo_vid":[], "rep_range": "low"
+      },
+      {
+        "id":"32",
+        "name":"Kettlebell Goblet Squat",
+        "target_area":"lower_body",
+        "style":"odd_object",
+        "demo_vid":[], "rep_range": "high"
+      },
+      {
+        "id":"33",
+        "name":"Rope Climb",
+        "target_area":"full_body",
+        "style":"high_skill",
+        "demo_vid":[], "rep_range": "low"
+      },
+      {
+        "id":"34",
+        "name":"Back Extension",
+        "target_area":"core",
+        "style":"gymnastics",
+        "demo_vid":[], "rep_range": "moderate"
+      },
+      {
+        "id":"35",
+        "name":"Good Morning",
+        "target_area":"core",
+        "style":"weightlifting",
+        "demo_vid":[], "rep_range": "low"
+      },
+      {
+        "id":"36",
+        "name":"Box Jump",
+        "target_area":"full_body",
+        "style":"calisthenics",
+        "demo_vid":[], "rep_range": "high"
+      },
+      {
+        "id":"37",
+        "name":"Box Step-up",
+        "target_area":"lower_body",
+        "style":"calisthenics",
+        "demo_vid":[], "rep_range": "high"
+      },
+      {
+        "id":"38",
+        "name":"Lunge",
+        "target_area":"lower_body",
+        "style":"calisthenics",
+        "demo_vid":[], "rep_range": "high"
+      },
+      {
+        "id":"39",
+        "name":"L-sit",
+        "target_area":"core",
+        "style":"gymnastics",
+        "demo_vid":[], "rep_range": "low"
+      },
+      {
+        "id":"40",
+        "name":"Sit-up",
+        "target_area":"core",
+        "style":"calisthenics",
+        "demo_vid":[], "rep_range": "high"
+      },
+      {
+        "id":"41",
+        "name":"Hollowrock",
+        "target_area":"core",
+        "style":"gymnastics",
+        "demo_vid":[], "rep_range": "high"
+      },
+      {
+        "id":"42",
+        "name":"Archrock",
+        "target_area":"core",
+        "style":"gymnastics",
+        "demo_vid":[], "rep_range": "high"
+      },
+      {
+        "id":"43",
+        "name":"Knees-to-elbow",
+        "target_area":"full_body",
+        "style":"gymnastics",
+        "demo_vid":[], "rep_range": "moderate"
+      },
+      {
+        "id":"44",
+        "name":"Toes-to-bar",
+        "target_area":"full_body",
+        "style":"gymnastics",
+        "demo_vid":[], "rep_range": "moderate"
+      },
+      {
+        "id":"45",
+        "name":"Push-up",
+        "target_area":"upper-body",
+        "style":"calisthenics",
+        "demo_vid":[], "rep_range": "high"
+      },
+      {
+        "id":"46",
+        "name":"Strict Pull-up",
+        "target_area":"upper-body",
+        "style":"gymnastics",
+        "demo_vid":[], "rep_range": "low"
+      },
+      {
+        "id":"47",
+        "name":"Kipping Pull-up",
+        "target_area":"upper-body",
+        "style":"gymnastics",
+        "demo_vid":[], "rep_range": "high"
+      },
+      {
+        "id":"48",
+        "name":"Chest-to-bar Pull-up",
+        "target_area":"upper-body",
+        "style":"gymnastics",
+        "demo_vid":[], "rep_range": "moderate"
+      },
+      {
+        "id":"49",
+        "name":"Dip",
+        "target_area":"upper-body",
+        "style":"gymnastics",
+        "demo_vid":[], "rep_range": "moderate"
+      },
+      {
+        "id":"50",
+        "name":"Handstand Push-up",
+        "target_area":"upper-body",
+        "style":"high_skill",
+        "demo_vid":[], "rep_range": "moderate"
+      },
+      {
+        "id":"51",
+        "name":"Muscle-up",
+        "target_area":"upper-body",
+        "style":"high_skill",
+        "demo_vid":[], "rep_range": "low"
+      },
+      {
+        "id":"52",
+        "name":"Bar Muscle-up",
+        "target_area":"upper-body",
+        "style":"high_skill",
+        "demo_vid":[], "rep_range": "low"
+      },
+      {
+        "id":"53",
+        "name":"Burpee",
+        "target_area":"full_body",
+        "style":"calisthenics",
+        "demo_vid":[], "rep_range": "high"
+      },
+      {
+        "id":"54",
+        "name":"Thruster",
+        "target_area":"full_body",
+        "style":"weightlifting",
+        "demo_vid":[], "rep_range": "moderate"
+      },
+      {
+        "id":"55",
+        "name":"Wallball",
+        "target_area":"full_body",
+        "style":"odd_object",
+        "demo_vid":[], "rep_range": "high"
+      },
+      {
+        "id":"56",
+        "name":"Ball Slam",
+        "target_area":"full_body",
+        "style":"odd_object",
+        "demo_vid":[], "rep_range": "high"
+      },
+      {
+        "id":"57",
+        "name":"Burpee-Pullup",
+        "target_area":"full_body",
+        "style":"calisthenics",
+        "demo_vid":[], "rep_range": "moderate"
+      },
+      {
+        "id":"58",
+        "name":"Run",
+        "target_area":"full_body",
+        "style":"cardio",
+        "demo_vid":[], "rep_range": "low"
+      },
+      {
+        "id":"59",
+        "name":"Row",
+        "target_area":"full_body",
+        "style":"cardio",
+        "demo_vid":[], "rep_range": "low"
+      },
+      {
+        "id":"60",
+        "name":"Double-under",
+        "target_area":"full_body",
+        "style":"cardio",
+        "demo_vid":[], "rep_range": "high"
+      },
+      {
+        "id":"61",
+        "name":"Plank Hold",
+        "target_area":"core",
+        "style":"gymnastics",
+        "demo_vid":[], "rep_range": "low"
+      },
+      {
+        "id":"62",
+        "name":"Split Jump",
+        "target_area":"lower_body",
+        "style":"calisthenics",
+        "demo_vid":[], "rep_range": "high"
+      },
+      {
+        "id":"63",
+        "name":"Broad Jump",
+        "target_area":"full_body",
+        "style":"calisthenics",
+        "demo_vid":[], "rep_range": "low"
+      },
+      {
+        "id":"64",
+        "name":"Bear Crawl",
+        "target_area":"full_body",
+        "style":"calisthenics",
+        "demo_vid":[], "rep_range": "low"
+      },
+      {
+        "id":"65",
+        "name":"Wall Climb",
+        "target_area":"upper_body",
+        "style":"gymnastics",
+        "demo_vid":[], "rep_range": "low"
+      }
+   ]
+}

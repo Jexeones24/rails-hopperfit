@@ -9,8 +9,8 @@ class HoppersController < ApplicationController
 
   def create
     # byebug
-    @hopper = Hopper.new(hopper_params)
-    @hopper.save
+    @hopper = Hopper.create(hopper_params)
+    @hopper.number_of_movements(hopper_params)
     redirect_to hopper_path(@hopper)
   end
 
