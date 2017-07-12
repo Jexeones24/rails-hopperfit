@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hopper_id: 1
+  movement_ids: 1
+
+two:
+  hopper_id: 1
+  movement_ids: 1

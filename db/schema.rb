@@ -10,18 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170708215851) do
-
-  create_table "hoppers", force: :cascade do |t|
-    t.integer "time_domain"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "movement_id"
-  end
+ActiveRecord::Schema.define(version: 20170711182729) do
 
   create_table "movements", force: :cascade do |t|
     t.string "name"
     t.string "style"
+    t.string "target_area"
     t.string "rep_range"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -48,9 +42,10 @@ ActiveRecord::Schema.define(version: 20170708215851) do
   end
 
   create_table "workouts", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "hopper_id"
+    t.integer "time_domain"
   end
 
 end

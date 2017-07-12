@@ -1,2 +1,9 @@
-<%= @workout %>
-I need this
+<center><h1><%= @workout.name %></h1><br></center>
+
+<% rep_array.each do |rep| %>
+  <% movement_array.each do |movement| %>
+    <%= "#{rep.join()} #{movement[:name]}" %>
+        <% end %>
+      <% end %>
+
+      <!-- displaying twice -->

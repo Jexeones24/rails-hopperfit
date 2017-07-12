@@ -1,51 +1,34 @@
-require 'json'
+class Hopper
+  @@workout = []
+  @@rep_array = []
 
-movements = File.read('./tools/movement_library.json')
-MOVEMENT_LIB = JSON.parse(movements)
+  def self.choose_movements(num)
+    Movement.all.sample(num) #movements would be instances
+  end
 
-class Hopper < ApplicationRecord
-  has_one :workout
-  has_many :movements
-
-
-  def number_of_movements(time_domain)
-    movement_num = nil
-    if time_domain["time_domain"].to_i.between?(5, 10)
-      movement_num = rand(1..3)
-    elsif time_domain["time_domain"].to_i.between?(11, 30)
-      movement_num = rand(3..5)
-    else
-      movement_num = rand(5..8)
+  #iterate over array and assign each movement reps
+  def self.assign_reps(movement_array)
+    movement_array.map do |movement|
+      if movement["rep_range"] == "Low"
+        reps = rand(3..10)
+        self.rep_array << reps
+      elsif movement["rep_range"] == "Moderate"
+        reps = rand(11..30)
+        self.rep_array << reps
+      else
+        reps = rand(31..70)
+        self.rep_array << reps
+      end
+      byebug
     end
-    byebug
   end
 
-  def choose_movements(movement_num)
-    movement_objects_array = MOVEMENT_LIB["movements"].sample(movement_num).map { |obj| Movement.new(name: obj["name"], style: obj["style"], rep_range: obj["rep_range"]) }
-    self << movement_objects_array #need a way to give hopper object an array of movements
+  def self.workout
+    @@workout
   end
 
-  def assign_reps(movement_objects_array)
-    puts "we here now"
+  def self.rep_array
+    @@rep_array
   end
-
-
-  # movement_num => 3
-  # create x amount Movement.new
-  # @movement_num.times do (choose movement randomly json)
-  # Movement.new(params hash) ???
-  # when do we call reps method???
-
-  def create_workout
-    @workout = Workout.create(self)
-  end
-
-  def self.hoppify(time_domain)
-    movement_num = self.number_of_movements(time_domain)
-    self.choose_movements(movement_num)
-    self.assign_reps(movement_objects_array)
-    self.create_workout
-  end
-
 
 end
