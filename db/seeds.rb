@@ -77,8 +77,6 @@ Movement.create(name: "Bear Crawl", style: "Parkour", target_area: "Full Body", 
 Movement.create(name: "Wall Climb", style: "Parkour", target_area: "Upper Body", rep_range: "Low")
 
 
-
-
 sally = User.create(name: "Sally Jensen")
 bobby = User.create(name: "Bobby Bains")
 george = User.create(name: "George Jetson")

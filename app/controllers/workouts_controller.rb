@@ -10,14 +10,17 @@ class WorkoutsController < ApplicationController
 
   def create
     @workout = Workout.create(workout_params)
-    num = @workout.number_of_movements(workout_params[:time_domain])
-    movement_array = Hopper.choose_movements(num)
-    rep_array = Hopper.assign_reps(movement_array)
+    @hopper = Hopper.new(number_of_movements: @workout.number_of_movements)
+    @workout.hoppers << @hopper
+    @hopper.choose_movements.each { |movement| @workout.movements << movement}
+    @workout.save
     redirect_to workout_path(@workout)
   end
 
   def show
     @workout = Workout.find_by(id: params[:id])
+    @hopper = @workout.hoppers.last
+    @reps_array = @hopper.assign_reps(@hopper.workout.movements)
   end
 
   private

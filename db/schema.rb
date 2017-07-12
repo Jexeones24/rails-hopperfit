@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170711182729) do
+ActiveRecord::Schema.define(version: 20170712211409) do
+
+  create_table "comments", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "workout_id"
+  end
+
+  create_table "hoppers", force: :cascade do |t|
+    t.integer "workout_id"
+    t.integer "number_of_movements"
+  end
 
   create_table "movements", force: :cascade do |t|
     t.string "name"
@@ -19,6 +29,10 @@ ActiveRecord::Schema.define(version: 20170711182729) do
     t.string "rep_range"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.integer "user_id"
   end
 
   create_table "user_workouts", force: :cascade do |t|
