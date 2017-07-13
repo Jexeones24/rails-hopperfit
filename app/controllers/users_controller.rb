@@ -1,21 +1,31 @@
 class UsersController < ApplicationController
-
+  before_action :authorized, only: [:index]
+  # has_secure_password
+  
   def index
     @users = User.all
+    if session[:user_id]
+      @current_user = User.find(session[:user_id])
+    end
   end
 
   def new
     @user = User.new
-    render 'new'
   end
 
   def create
-    @user = User.create(user_params)
-    redirect_to user_path(@user)
+    @user = User.new(user_params)
+    if @user.save
+      session[:user_id] = @user.id
+      redirect_to workouts_path
+    else
+      # redirect_to '/signup'
+      render :new
+    end
   end
 
   def show
-    @user = User.find_by(id: params[:id])
+    @current_user = User.find_by(id: params[:id])
   end
 
   def edit
@@ -36,7 +46,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 
 end

@@ -12,9 +12,13 @@ class Hopper < ActiveRecord::Base
       if movement.rep_range == "Low"
         rand(3..10)
       elsif movement.rep_range == "Moderate"
-        rand(11..30)
+        rand(11..25)
+      elsif movement.rep_range == "Meters"
+        "400 Meter"
+      elsif movement.rep_range == "Minutes"
+        "1 Minute"
       else
-        rand(31..70)
+        rand(26..55)
       end
     end
   end
