@@ -5,7 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'getSkeleton-rails'
+
+gem 'jquery-infinite-pages'
 gem 'jquery-rails'
 gem 'materialize-sass'
 gem 'bootstrap-sass'

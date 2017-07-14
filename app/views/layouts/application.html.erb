@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>HopperFit</title>
+  <title>GENER8</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
 </head>
 <body>
-
 <%= render "shared/navbar" %>
 
    <div class="slider">
@@ -18,7 +19,6 @@
        <div class="caption center-align">
          <h3>Embrace the suck</h3>
          <h5 class="light grey-text text-lighten-3"></h5>
-         <a class="waves-effect waves-light btn grey darken-3">Signup</a>
        </div>
      </li>
      <li>
@@ -27,41 +27,23 @@
          <h3>Prepare for anything</h3>
        </div>
      </li>
-     <li>
-       <img src="Users/jexeones/Development/personal-projects/rails-hopperfit"> <!-- random image -->
-       <div class="caption right-align">
-         <h3>Don't be a p@$%!</h3>
-         <h5 class="light grey-text text-lighten-3"></h5>
-       </div>
-     </li>
-     <li>
-       <img src="https://lorempixel.com/580/250/nature/4"> <!-- random image -->
-       <div class="caption center-align">
-         <h3>That shit's deep.</h3>
-       </div>
-     </li>
    </ul>
  </div>
- <% if current_user %>
-    Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout'%>
-  <% else %>
-    <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/users/new' %>
-  <% end %>
-
-
 
 <%= yield %>
 
-
- <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="js/materialize.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
 <script>
   $(document).ready(function () {
-      $('.slider').slider({full_width: true});
-  });
-</script>
+    $('.slider').slider({full_width: true});
+      $(".button-collapse").sideNav();
+        $('.carousel.carousel-slider').carousel({fullWidth: true});
+      $(document).ready(function(){
+    $('.scrollspy').scrollSpy();
+    });
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
-
-</body>
+    });
+    </script>
+  </body>
 </html>

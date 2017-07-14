@@ -16,3 +16,4 @@
 //= require bootstrap
 //= require jquery_ujs
 //= require materialize-sprockets
+//= require jquery.infinite-pages

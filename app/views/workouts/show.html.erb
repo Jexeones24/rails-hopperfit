@@ -1,10 +1,16 @@
 <center>
-  <h1><%= @workout.name %></h1><br><br>
-    <h2><%= "#{@workout.style} #{@workout.time_domain}:" %></h2>
-      <h4><% @reps_array.zip(@hopper.workout.movements).each do |rep, move| %>
+  <h1><%= @workout.name %></h1><br>
+    <h4><%= "#{@workout.style} #{@workout.time_domain}:" %></h4>
+      <h5><% @reps_array.zip(@hopper.workout.movements).each do |rep, move| %>
     <%= "#{rep} #{move.name}" %><br>
-  <% end %></h4>
+  <% end %></h5>
 </center>
-  <p><% @workout.movements.each do |m| %></p>
-  <p>The <%= m.name %> is a <%= m.style.downcase %> style movement, which targets the <%= m.target_area.downcase %>.</p>
-  <% end %>
+
+
+    <div class="row">
+      <div class="col s14 m2">
+        <div class="card-panel black">
+          <span class="white-text"><% @workout.movements.each do |m| %>The <%= m.name %> is a <%= m.style.downcase %> style movement, targeting the <%= m.target_area.downcase %>.<% end %></span>
+        </div>
+      </div>
+    </div>
