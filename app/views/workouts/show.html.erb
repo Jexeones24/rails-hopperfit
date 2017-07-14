@@ -1,5 +1,5 @@
 <center><h1><%= @workout.name %></h1><br><br>
-  <h2><%= "Amrap #{@workout.time_domain} minutes:" %></h2>
+  <h2><%= "#{@workout.style} #{@workout.time_domain}:" %></h2>
   <h4><% @reps_array.zip(@hopper.workout.movements).each do |rep, move| %>
     <%= "#{rep} #{move.name}" %><br>
   <% end %></h4></center>

@@ -11,7 +11,8 @@ class WorkoutsController < ApplicationController
 
   def create
     @workout = Workout.create(workout_params)
-    @hopper = Hopper.new(number_of_movements: @workout.number_of_movements)
+    @hopper = Hopper.new(style: @workout.style, number_of_movements: @workout.number_of_movements)
+
     @workout.hoppers << @hopper
     @hopper.choose_movements.each { |movement| @workout.movements << movement}
     @workout.name = @workout.faker
