@@ -8,11 +8,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
 </head>
 <body>
-
-  <%= render "shared/navbar" %>
-   <!-- <nav>
-    <div class="nav-wrapper deep-orange accent-3">
-      <a href="#!" class="brand-logo center">The Hopper</a>
+=======
+<%= render "shared/navbar" %>
+   <nav>
+    <div class="nav-wrapper red darken-2">
+      <a href="#!" class="brand-logo center">Gener8</a>
       <ul class="right hide-on-med-and-down">
         <li><a class="waves-effect waves-light btn blue-grey lighten-2" href="/">Home</a></li>
         <li><a href="/about">About</a></li>
@@ -55,13 +55,17 @@
      </li>
    </ul>
  </div>
+ <% if current_user %>
+    Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout'%>
+  <% else %>
+    <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/users/new' %>
+  <% end %>
 
 
 
 <%= yield %>
 
-
- <!-- <div class="row">
+ <div class="row">
 
      <div class="col s4">
        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, incidunt, odit accusamus, labore beatae illo delectus nostrum ea reiciendis consequatur amet tempore cum iusto voluptatibus laborum nesciunt enim veritatis. Modi.
