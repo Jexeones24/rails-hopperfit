@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root   'workouts#index'
+  root to: 'welcome#index'
   get    '/about',   to: 'static_pages#about'
   get    '/login',   to: 'sessions#new', as: 'login'
   post   '/login',   to: 'sessions#create', as: 'sessions'

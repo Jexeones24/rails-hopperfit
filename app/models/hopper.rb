@@ -10,15 +10,15 @@ class Hopper < ActiveRecord::Base
   def assign_reps(movement_array)
     movement_array.map do |movement|
       if movement.rep_range == "Low"
-        rand(3..10)
+        rand(3..8)
       elsif movement.rep_range == "Moderate"
-        rand(11..25)
+        rand(9..20)
       elsif movement.rep_range == "Meters"
         "400 Meter"
       elsif movement.rep_range == "Minutes"
         "1 Minute"
       else
-        rand(26..55)
+        rand(21..40)
       end
     end
   end

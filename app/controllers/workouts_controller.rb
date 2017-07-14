@@ -14,6 +14,7 @@ class WorkoutsController < ApplicationController
     @hopper = Hopper.new(number_of_movements: @workout.number_of_movements)
     @workout.hoppers << @hopper
     @hopper.choose_movements.each { |movement| @workout.movements << movement}
+    @workout.name = @workout.faker
     @workout.save
     redirect_to workout_path(@workout)
   end

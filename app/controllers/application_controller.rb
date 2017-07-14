@@ -17,12 +17,7 @@ class ApplicationController < ActionController::Base
 
   def logged_in?
       # this works
-      # !!current_user
-    if current_user
-      true
-    else
-      false
-    end
+      !!current_user
   end
 
 

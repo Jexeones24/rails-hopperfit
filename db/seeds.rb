@@ -13,7 +13,7 @@ Movement.create(name: "Snatch", style: "Olympic Weightlifting", target_area: "Fu
 Movement.create(name: "Pull-up", style: "Gymnastics", target_area: "Upper Body", rep_range: "High")
 Movement.create(name: "Situp", style: "Calisthenics", target_area: "Core", rep_range: "High")
 Movement.create(name: "Deadlift", style: "Powerlifting", target_area: "Lower Body", rep_range: "Moderate")
-Movement.create(name: "Fron Squat", style: "Weightifting", target_area: "Full Body", rep_range: "Moderate")
+Movement.create(name: "Front Squat", style: "Weightifting", target_area: "Full Body", rep_range: "Moderate")
 Movement.create(name: "Overhead Squat", style: "Olympic Weightifting", target_area: "Full Body", rep_range: "Moderate")
 Movement.create(name: "Sumo Deadlift", style: "Powerlifting", target_area: "Lower Body", rep_range: "Low")
 Movement.create(name: "Sumo Deadlift High Pull", style: "Weightlifting", target_area: "Full Body", rep_range: "Moderate")
@@ -77,7 +77,8 @@ Movement.create(name: "Bear Crawl", style: "Parkour", target_area: "Full Body", 
 Movement.create(name: "Wall Climb", style: "Parkour", target_area: "Upper Body", rep_range: "Low")
 
 
-sally = User.create(name: "Sally Jensen")
-bobby = User.create(name: "Bobby Bains")
-george = User.create(name: "George Jetson")
-hector = User.create(name: "Hector Projector")
+User.create(name: "Khal Drogo", email: "sexy@af.com", password: "sexy", password_confirmation: "sexy")
+User.create(name: "Sally Jensen", email: "sally@sally.com", password: "sally", password_confirmation: "sally")
+User.create(name: "Bobby Bains", email: "bobby@bobby.com", password: "bobby", password_confirmation: "bobby")
+User.create(name: "George Jetson", email: "george@george.com", password: "george", password_confirmation: "george")
+User.create(name: "Hector Projector", email: "hector@hector.com", password: "hector", password_confirmation: "hector")
