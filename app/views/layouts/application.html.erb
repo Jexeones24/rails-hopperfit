@@ -9,8 +9,8 @@
 </head>
 <body>
    <nav>
-    <div class="nav-wrapper deep-orange accent-3">
-      <a href="#!" class="brand-logo center">The Hopper</a>
+    <div class="nav-wrapper red darken-2">
+      <a href="#!" class="brand-logo center">Gener8</a>
       <ul class="right hide-on-med-and-down">
         <li><a class="waves-effect waves-light btn blue-grey lighten-2">Home</a></li>
         <li><a href="#">About</a></li>
@@ -53,14 +53,13 @@
      </li>
    </ul>
  </div>
+ <% if current_user %>
+    Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout'%>
+  <% else %>
+    <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/users/new' %>
+  <% end %>
 
 <%= yield %>
-
-<% if current_user %>
-   Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout'%>
- <% else %>
-   <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/users/new' %>
- <% end %>
 
  <div class="row">
 

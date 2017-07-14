@@ -2,11 +2,9 @@ class Hopper < ActiveRecord::Base
   belongs_to :workout
 
   def choose_movements
-     #movements would be instances
     Movement.all.sample(self.number_of_movements)
   end
 
-  #iterate over array and assign each movement reps
   def assign_reps(movement_array)
     movement_array.map do |movement|
       if movement.rep_range == "Low"
@@ -18,7 +16,7 @@ class Hopper < ActiveRecord::Base
       elsif movement.rep_range == "Minutes"
         "1 Minute"
       else
-        rand(21..40)
+        rand(21..30)
       end
     end
   end
