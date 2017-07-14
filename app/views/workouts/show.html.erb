@@ -1,5 +1,10 @@
-<center><h1><%= @workout.name %></h1><br><br>
-  <h2><%= "#{@workout.style} #{@workout.time_domain}:" %></h2>
-  <h4><% @reps_array.zip(@hopper.workout.movements).each do |rep, move| %>
+<center>
+  <h1><%= @workout.name %></h1><br><br>
+    <h2><%= "#{@workout.style} #{@workout.time_domain}:" %></h2>
+      <h4><% @reps_array.zip(@hopper.workout.movements).each do |rep, move| %>
     <%= "#{rep} #{move.name}" %><br>
-  <% end %></h4></center>
+  <% end %></h4>
+</center>
+  <p><% @workout.movements.each do |m| %></p>
+  <p>The <%= m.name %> is a <%= m.style.downcase %> style movement, which targets the <%= m.target_area.downcase %>.</p>
+  <% end %>

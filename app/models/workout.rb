@@ -26,8 +26,8 @@ class Workout < ApplicationRecord
 
   def style
     low_vol = ["AMRAP", "EMOM","Rounds for time"]
-    med_vol = ["AMRAP", "EMOM", "Rounds for time"]
-    hi_vol = ["AMRAP", "Every 2 minutes on the minute for", "Every 3 minutes on the  minute for"]
+    med_vol = ["AMRAP", "EMOM", "3 Rounds for time", "4 Rounds For time"]
+    hi_vol = ["5 Rounds For time", "Rounds for time", "Every 3 minutes on the  minute for"]
 
     if
       self.time_domain.between?(5, 8)
