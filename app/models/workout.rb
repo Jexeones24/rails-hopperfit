@@ -4,7 +4,9 @@ class Workout < ApplicationRecord
   has_many :workout_movements
   has_many :movements, through: :workout_movements
   has_many :user_workouts
-  has_many :users, through: :user_workout
+  has_many :users, through: :user_workouts
+
+
 
   def faker
     [Faker::Superhero.suffix,
@@ -27,7 +29,7 @@ class Workout < ApplicationRecord
   def style
     low_vol = ["AMRAP", "EMOM","Rounds for time"]
     med_vol = ["AMRAP", "EMOM", "3 Rounds for time", "4 Rounds For time"]
-    hi_vol = ["5 Rounds For time", "Rounds for time", "Every 3 minutes on the  minute for"]
+    hi_vol = ["5 Rounds For time", "Every 3 minutes on the  minute for"]
 
     if
       self.time_domain.between?(5, 8)
@@ -50,7 +52,7 @@ class Workout < ApplicationRecord
     elsif self.time_domain.between?(17, 35)
       movement_num = rand(3..4)
     else
-      movement_num = rand(5..6)
+      movement_num = rand(3..4)
     end
     movement_num
   end

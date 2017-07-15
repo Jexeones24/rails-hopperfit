@@ -1,9 +1,11 @@
 
-<center><h1>Login</h1>
-
+<div class="container">
+<center>
    <%= form_tag sessions_path do %>
-    Email: <%= text_field_tag :email %>
-    Password: <%= password_field_tag :password %>
-    Password Confirmation: <%= password_field_tag :password_confirmation %>
-     <%= submit_tag "Log in" %>
-   <% end %></center>
+    Email <%= text_field_tag :email %>
+    Password <%= password_field_tag :password %>
+    Password Confirmation <%= password_field_tag :password_confirmation %>
+     <%= submit_tag "GO" %>
+   <% end %>
+  </center>
+</div>

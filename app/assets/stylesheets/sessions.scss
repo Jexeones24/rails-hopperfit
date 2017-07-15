@@ -1,3 +1,16 @@
 // Place all the styles related to the Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.slider .indicators .indicator-item.active {
+  color: red;
+
+}
+
+.parallax-container {
+      height: 50px;
+}
+
+.carousel-item {
+  overflow: scroll;
+  height: 100px
+}

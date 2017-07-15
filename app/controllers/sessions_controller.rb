@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   def new #login page
+    @user = User.new
   end
 
   def create
@@ -13,7 +14,7 @@ class SessionsController < ApplicationController
       redirect_to user_path(@user)
     else
     # If user's login doesn't work, send them back to the login form.
-      render :new
+      render 'users/new'
     end
   end
 

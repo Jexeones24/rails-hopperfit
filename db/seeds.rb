@@ -59,7 +59,7 @@ Movement.create(name: "Kipping Pull-up", style: "Gymnastics", target_area: "Uppe
 Movement.create(name: "Chest-to-Bar Pull-up", style: "Gymnastics", target_area: "Upper Body", rep_range: "High")
 Movement.create(name: "Dip", style: "Gymnastics", target_area: "Upper Body", rep_range: "Moderate")
 Movement.create(name: "Ring Dip", style: "Gymnastics", target_area: "Upper Body", rep_range: "Low")
-Movement.create(name: "Handstand Push-Up", style: "Odd Object", target_area: "Upper Body", rep_range: "Moderate")
+Movement.create(name: "Handstand Push-Up", style: "Gymnastics", target_area: "Upper Body", rep_range: "Moderate")
 Movement.create(name: "Muscle-Up", style: "Gymnastics", target_area: "Upper Body", rep_range: "Low")
 Movement.create(name: "Bar Muscle-Up", style: "Gymnastics", target_area: "Upper Body", rep_range: "Low")
 Movement.create(name: "Burpee", style: "Calisthenics", target_area: "Full Body", rep_range: "High")

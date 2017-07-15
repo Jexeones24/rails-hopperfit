@@ -1,5 +1,7 @@
 
-<center><h1>Users</h1><br>
-  <% @users.each do |user| %>
-  <li><%= user.name  %></li><br>
-<% end %></center>
+<center>
+  <h1>Users</h1><br>
+    <% @users.each do |user| %>
+      <%= link_to "#{user.name}", user_path(user.id)  %><br>
+    <% end %><br>
+  </center>

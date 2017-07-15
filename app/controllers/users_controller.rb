@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :authorized, only: [:index]
   # has_secure_password
-  
+
   def index
     @users = User.all
     if session[:user_id]
@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      redirect_to workouts_path
+      redirect_to user_path(@user)
     else
       # redirect_to '/signup'
       render :new
@@ -46,7 +46,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    params.require(:user).permit(:name, :email, :email_confirmation, :password,  :password_confirmation)
   end
 
 end

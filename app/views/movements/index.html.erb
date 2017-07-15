@@ -1,5 +1,5 @@
 <center><h1>All Movements</h1>
 
 <% @movements.each do |movement| %>
-<%= link_to @movement, movement.name  %><br>
+<%= link_to "#{movement.name}", movement_path(movement.id) %><br>
 <% end %></center>

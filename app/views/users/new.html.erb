@@ -1,12 +1,15 @@
 
 <center><h1>Signup!</h1>
 
-    <%= form_for @user do |f| %>
+    <%= form_for User.new do |f| %>
       <%= f.label :name %>
       <%= f.text_field :name %>
 
       <%= f.label :email %>
       <%= f.text_field :email %>
+
+      <%= f.label :email_confirmation %>
+      <%= text_field :user, :email_confirmation %>
 
       <%= f.label :password %>
       <%= f.password_field :password %>

@@ -1,16 +1,26 @@
-<center>
-  <h1><%= @workout.name %></h1><br>
-    <h4><%= "#{@workout.style} #{@workout.time_domain}:" %></h4>
-      <h5><% @reps_array.zip(@hopper.workout.movements).each do |rep, move| %>
-    <%= "#{rep} #{move.name}" %><br>
-  <% end %></h5>
 </center>
-
-
-    <div class="row">
-      <div class="col s14 m2">
-        <div class="card-panel black">
-          <span class="white-text"><% @workout.movements.each do |m| %>The <%= m.name %> is a <%= m.style.downcase %> style movement, targeting the <%= m.target_area.downcase %>.<% end %></span>
-        </div>
-      </div>
-    </div>
+<div class="parallax-container">
+   <div class="parallax"><img src="http://vikingweightlifting.com/wp-content/uploads/2012/06/Eleiko-Weightlifting-Equipment.jpg"></div>
+ </div>
+ <div class="section white">
+   <div class="row container">
+       <p class="grey-text text-darken-3 lighten-3">
+         <center>
+           <% if @workout.style.include?("Rounds") %>
+             <h1><%= @workout.name %></h1><br>
+               <h4><%= "#{@workout.style}:" %></h4>
+                 <h5><% @reps_array.zip(@hopper.workout.movements).each do |rep, move| %>
+               <%= link_to "#{rep} #{move.name}", movement_path(move.id) %><br>
+             <% end %></h5>
+           <% else %>
+           <h1><%= @workout.name %></h1><br>
+             <h4><%= "#{@workout.style} #{@workout.time_domain}:" %></h4>
+               <h5><% @reps_array.zip(@hopper.workout.movements).each do |rep, move| %>
+             <%= link_to "#{rep} #{move.name}", movement_path(move.id) %><br>
+           <% end %></h5>
+        <% end %><br>
+   </div>
+ </div>
+ <div class="parallax-container">
+   <div class="parallax"><img src="https://usercontent1.hubstatic.com/6894236_f520.jpg"></div>
+ </div>
