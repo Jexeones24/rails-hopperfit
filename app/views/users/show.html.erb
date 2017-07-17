@@ -1,21 +1,27 @@
-<center><h1>Hello, <%= current_user.name %>!</h1>
-  <%= Time.now.strftime("%d/%m/%Y %H:%M") %>
+<center><h1 style="color:white;">Hello, <%= @user.name %>!</h1>
+
+  <h2 style="color:white;">Go get 'em, Tiger!!!'</h2>
+
+  <h3 style="color:white;"><%= Time.now.strftime("%d/%m/%Y %H:%M") %></h3>
 </center>
 
 <div class="carousel carousel-slider center" data-indicators="true">
   <div class="carousel-item blue white-text" href="#one!">
-    <h2>Ready?</h2>
     <div class="carousel-fixed-item center">
       <a class="btn waves-effect white grey-text darken-text-2" href="/workouts/new">GENER8 Workout</a>
     </div>
   </div>
   <div class="carousel-item amber white-text" href="#two!">
     <h2>Completed Workouts</h2>
-    <% @current_user.workouts.each do |workout| %>
+    <% @user.workouts.each do |workout| %>
     <%= link_to "#{workout.name}", workout_path(workout.id) %><br>
     <% end %>
   </div>
-  <div class="carousel-item green white-text" href="#three!">
-    <h2>Track Progress</h2>
+  <div class="carousel-item green black-text" href="#three!">
+    <h2>Progress</h2>
+      <div class="row">
+        <p>Workouts Completed</p><%= @user.workouts.count %>
+        <p>Workouts Completed This Week </p><%= @user.workouts_per_week %>
+      </div>
   </div>
 </div>

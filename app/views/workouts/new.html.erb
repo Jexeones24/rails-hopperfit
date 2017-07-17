@@ -1,6 +1,6 @@
-<center><h1>New Workout</h1><br>
+<center><br>
 <%= form_for @workout do |f| %>
   <%= f.label :time_domain, "TIME DOMAIN" %>
-  <%= f.number_field :time_domain, min: 5, max: 60, :style => "width:70px" %>
+  <h1 style="color:white;"><%= f.number_field :time_domain, min: 5, max: 60, :style => "width:60px", :required => true %></h1>
   <%= f.submit "Generate Workout" %>
 <% end %></center>

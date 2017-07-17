@@ -9,4 +9,6 @@ module SessionsHelper
     session.delete[:user_id] #session is a hash, delete value of :user_id key
     @current_user = nil
   end
+
+
 end

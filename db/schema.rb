@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170715183628) do
+ActiveRecord::Schema.define(version: 20170717022901) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "user_id"
@@ -31,10 +31,19 @@ ActiveRecord::Schema.define(version: 20170715183628) do
     t.string "rep_range"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "video_url"
   end
 
   create_table "profiles", force: :cascade do |t|
     t.integer "user_id"
+    t.datetime "birthday"
+    t.string "summary"
+    t.string "name"
+  end
+
+  create_table "stopwatches", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "user_workouts", force: :cascade do |t|

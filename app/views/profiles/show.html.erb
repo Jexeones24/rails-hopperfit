@@ -1,0 +1,27 @@
+
+<% User.all.count.times do |user| %>
+<div class="card">
+  <div class="card-header">
+    <img src="https://s-media-cache-ak0.pinimg.com/originals/3b/f0/77/3bf0775b0d234545d14a5941be966ab2.jpg"/>
+  </div>
+  <div class="card-content">
+    <h3>username</h3>
+    <h4>birthday </h4>
+    <p>motto</p>
+    <p>add friend</p>
+  </div>
+  <div class="card-footer">
+    <ul>
+      <li>
+        <a href="#"><i class="fa fa-codepen"></i></a>
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-stack-overflow"></i></a>
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-github"></i></a>
+      </li>
+    </ul>
+  </div>
+</div>
+<% end %>

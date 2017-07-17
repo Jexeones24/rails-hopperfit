@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :authorized, only: [:index]
-  # has_secure_password
+
+  before_action :require_permission, only: :edit
 
   def index
     @users = User.all
@@ -19,20 +19,21 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to user_path(@user)
     else
-      # redirect_to '/signup'
       render :new
     end
   end
 
   def show
-    @current_user = User.find_by(id: params[:id])
+    @user = User.find(session[:user_id])
   end
 
   def edit
-    @user = User.find_by(id: params[:id])
+    @user = User.find(session[:user_id])
+    @profile = user.profile
   end
 
   def update
+    @user = User.find(session[:user_id])
     @user = User.update(user_params)
     redirect_to user_path(@user)
   end
@@ -47,6 +48,12 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name, :email, :email_confirmation, :password,  :password_confirmation)
+  end
+
+  def require_permission
+    if user != User.find(params[:id])
+      redirect_to '/'
+    end
   end
 
 end

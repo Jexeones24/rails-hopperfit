@@ -1,7 +1,33 @@
-<h2><%= @movement.name  %></h2><br>
-<%= @movement.style  %><br>
-<%= @movement.target_area  %><br>
 
-  <div class="video-container">
-    <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0" allowfullscreen></iframe>
-  </div>
+
+  <html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Bangers', cursive;
+        /*font-family: 'Oswald', sans-serif;*/
+        font-size: 40px;
+      }
+    </style>
+  </head>
+  <div class="parallax-container">
+     <div class="parallax"><img src="https://usercontent1.hubstatic.com/6894236_f520.jpg"></div>
+   </div>
+   <div class="section white">
+     <div class="row container">
+         <p class="grey-text text-darken-3 lighten-3">
+          <h1><%= @movement.name %></h1>
+          <p>The <%= @movement.name %> is a <%= @movement.style %> exercise. It's a functional movement that is great for the <%= @movement.target_area%>.</p>
+          <div class="video-container">
+        <iframe width="853" height="480" src='<%="#{@movement.video_url}"%>' frameborder="0" allowfullscreen></iframe>
+      </div>
+          <a class="waves-effect waves-light btn" href="/movements">Back</a></center>
+          <a class="waves-effect waves-light btn" href="/users/id">Profile</a></center>
+     </div>
+   </div>
+   <div class="parallax-container">
+     <div class="parallax"><img src="http://vikingweightlifting.com/wp-content/uploads/2012/06/Eleiko-Weightlifting-Equipment.jpg"></div>
+   </div>
+  </html>

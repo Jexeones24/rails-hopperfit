@@ -1,0 +1,16 @@
+<div class="container">
+<center>
+  <h1 style="color:purple;">Edit Your Profile!</h1>
+    <div class="container">
+      <%= form_for @profile, url: edit_user_profile_path(@profile.user_id) do |f| %>
+        <%= f.label :name %>
+          <p style="color:white;"><%= f.text_field :name %></p>
+          <%= f.label :birthday %>
+          <p style="color:white;"><%= f.text_field :birthday %></p>
+          <%= f.label :motto %>
+        <p style="color:white;"><%= f.text_field :summary %></p>
+      <%= f.submit :update %>
+      <% end %>
+    </div>
+  </center>
+</div>

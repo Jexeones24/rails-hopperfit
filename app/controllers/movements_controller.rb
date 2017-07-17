@@ -6,5 +6,6 @@ class MovementsController < ApplicationController
 
   def show
     @movement = Movement.find_by(id: params[:id])
+    @user = User.find(session[:user_id])
   end
 end

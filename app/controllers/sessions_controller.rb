@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   def new #login page
-    @user = User.new
+    @user = User.find_by(id: session[:user_id])
   end
 
   def create
@@ -17,6 +17,7 @@ class SessionsController < ApplicationController
       render 'users/new'
     end
   end
+
 
   #delete sessions/logout
   def destroy

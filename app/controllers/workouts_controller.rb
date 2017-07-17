@@ -1,9 +1,10 @@
 class WorkoutsController < ApplicationController
-
   before_action :authorized, only: [:index]
 
   def index
     @workouts = Workout.all
+    flash[:alert] = "HI"
+
   end
 
   def new
@@ -19,14 +20,18 @@ class WorkoutsController < ApplicationController
     @user_id = session[:user_id]
     @user = User.find_by(id: @user_id)
     @workout.users << @user
-    @workout.save
-    redirect_to workout_path(@workout)
+    if @workout.save
+      redirect_to workout_path(@workout)
+    else
+      redirect_to
+    end
   end
 
   def show
     @workout = Workout.find_by(id: params[:id])
     @hopper = @workout.hoppers.last
     @reps_array = @hopper.assign_reps(@hopper.workout.movements)
+    @stopwatch = Stopwatch.new
   end
 
   private

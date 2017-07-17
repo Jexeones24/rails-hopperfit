@@ -13,17 +13,13 @@
              }
           </style>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
 </head>
 <body>
 <%= render "shared/navbar" %>
-  <% if current_user %>
-    <%= link_to "Logout", :controller => 'sessions', :action => 'destroy' %>
-  <% else %>
-    <%= link_to "Login", :controller => 'sessions', :action => 'new' %>
-  <% end %>
+
 
 <%= yield %>
 
@@ -32,17 +28,27 @@
 <script>
   $(document).ready(function () {
     $('.slider').slider({full_width: true});
-      $(".button-collapse").sideNav();
-        $('.carousel.carousel-slider').carousel({fullWidth: true});
-      $(document).ready(function(){
+    });
+
+  $(".button-collapse").sideNav();
+    $('.carousel.carousel-slider').carousel({fullWidth: true});
+
+  $(document).ready(function(){
     $('.scrollspy').scrollSpy();
+  });
 
-    });
-
-    });
-    $(document).ready(function(){
+  $(document).ready(function(){
      $('.parallax').parallax();
    });
+
+   $(document).ready(function() {
+   Materialize.updateTextFields();
+   });
+   $(document).ready(function(){
+  // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+  $('.modal-trigger').leanModal();
+});
+
     </script>
   </body>
 </html>
