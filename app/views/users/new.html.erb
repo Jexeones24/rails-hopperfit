@@ -1,7 +1,7 @@
 <div class="container">
 <center>
   <h1 style="color:white;">Signup!</h1>
-    <%= form_for User.new do |f| %>
+    <%= form_for @user do |f| %>
       <%= f.label :name %>
       <p style="color:white;"><%= f.text_field :name %></p>
 

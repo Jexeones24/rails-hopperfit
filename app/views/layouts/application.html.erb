@@ -19,7 +19,11 @@
 </head>
 <body>
 <%= render "shared/navbar" %>
-
+<% if @current_user %>
+   Signed in as <%= @current_user.name %> | <%=   link_to "Logout", '/logout' %>
+  <% else %>
+    <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
+<% end %>
 
 <%= yield %>
 

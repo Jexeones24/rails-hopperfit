@@ -12,9 +12,19 @@ class User < ActiveRecord::Base
   after_create :create_profile
 
   def workouts_per_week
-    from = Date.today - 7.days
-    to = Date.today
     self.workouts.where(created_at: 7.days.ago..Time.current).count
+  end
+
+  def workouts_last_two_days
+    self.workouts.where(created_at: 2.days.ago..Time.current).count
+  end
+
+  def endurance
+    self.workouts.where(time_domain: 15..60).count
+  end
+
+  def power
+    self.workouts.where(time_domain: 5..14).count
   end
 
 end

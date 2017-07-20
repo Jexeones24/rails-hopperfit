@@ -1,5 +1,5 @@
 class MovementsController < ApplicationController
-
+  before_action :authorize
   def index
     @movements = Movement.all
   end

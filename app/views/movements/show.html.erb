@@ -20,11 +20,9 @@
          <p class="grey-text text-darken-3 lighten-3">
           <h1><%= @movement.name %></h1>
           <p>The <%= @movement.name %> is a <%= @movement.style %> exercise. It's a functional movement that is great for the <%= @movement.target_area%>.</p>
-          <div class="video-container">
-        <iframe width="853" height="480" src='<%="#{@movement.video_url}"%>' frameborder="0" allowfullscreen></iframe>
-      </div>
           <a class="waves-effect waves-light btn" href="/movements">Back</a></center>
           <a class="waves-effect waves-light btn" href="/users/id">Profile</a></center>
+          <a class="waves-effect waves-light btn" href="http:<%= "#{@movement.video_url}"%>">Demo</a></center>
      </div>
    </div>
    <div class="parallax-container">

@@ -2,7 +2,8 @@
 <center>
   <h1 style="color:purple;">Edit Your Profile!</h1>
     <div class="container">
-      <%= form_for @profile, url: edit_user_profile_path(@profile.user_id) do |f| %>
+
+      <%= form_for @profile, url: edit_user_profile_path(@profile.user_id), :html => { :method => :patch} do |f| %>
         <%= f.label :name %>
           <p style="color:white;"><%= f.text_field :name %></p>
           <%= f.label :birthday %>

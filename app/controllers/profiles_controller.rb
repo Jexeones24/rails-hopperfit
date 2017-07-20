@@ -1,6 +1,6 @@
 class ProfilesController < ApplicationController
   before_action :find_profile, only: [:index, :show, :edit, :update, :destroy]
-
+  before_action :authorize
   def index
     @profile = Profile
   end
@@ -14,8 +14,10 @@ class ProfilesController < ApplicationController
   end
 
   def update
+    byebug
     @profile = Profile.update(profile_params)
     if @profile.update_attributes(profile_params)
+      byebug
       @profile.save!
       redirect_to user_profile_path
     else

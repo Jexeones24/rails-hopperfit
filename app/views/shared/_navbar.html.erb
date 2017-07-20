@@ -2,22 +2,9 @@
 <nav>
  <div class="nav-wrapper black">
    <a href="/workouts/new" class="brand-logo center">GENER8</a>
-   <a href="#" data-activates="mobile-demo" class="button-collapse"></a>
+   <a href="#" data-activates="mobile-demo" class="button-collapse">
+</a>
    <ul class="right hide-on-med-and-down">
-
-
-          <li><a class="waves-effect waves-light btn blue-grey
-           lighten-2"<% if @current_user %>
-              <%= link_to "Logout", :controller => 'sessions', :action => 'destroy' %>
-            <% else %>
-              <%= link_to "Login", :controller => 'sessions', :action => new_user_session_url(@session[:user_id]) %>
-            <% end %>
-
-           </a>
-          </li>
-
-
-
      <li><a href="/about">About</a></li>
      <li><a href="/movements">The Movements</a></li>
      <li><a href="/workouts">The Workouts</a></li>

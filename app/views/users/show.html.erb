@@ -3,12 +3,13 @@
   <h2 style="color:white;">Go get 'em, Tiger!!!'</h2>
 
   <h3 style="color:white;"><%= Time.now.strftime("%d/%m/%Y %H:%M") %></h3>
+      <a class="btn waves-effect white grey-text darken-text-2" href="/users/:user_id/profile/edit">Edit Profile</a>
 </center>
 
 <div class="carousel carousel-slider center" data-indicators="true">
   <div class="carousel-item blue white-text" href="#one!">
     <div class="carousel-fixed-item center">
-      <a class="btn waves-effect white grey-text darken-text-2" href="/workouts/new">GENER8 Workout</a>
+    <a class="btn waves-effect white grey-text darken-text-2" href="/workouts/new">GENER8 Workout</a>
     </div>
   </div>
   <div class="carousel-item amber white-text" href="#two!">
@@ -18,10 +19,13 @@
     <% end %>
   </div>
   <div class="carousel-item green black-text" href="#three!">
-    <h2>Progress</h2>
+    <h2>Stats</h2>
       <div class="row">
         <p>Workouts Completed</p><%= @user.workouts.count %>
         <p>Workouts Completed This Week </p><%= @user.workouts_per_week %>
+        <p>Workouts Completed Last 2 Days </p><%= @user.workouts_last_two_days %>
+        <p>Endurance | Long Duration Workouts </p><%= @user.endurance %>
+        <p>Power | Interval Workouts </p><%= @user.power %>
       </div>
   </div>
 </div>

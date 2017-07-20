@@ -1,5 +1,5 @@
 class WorkoutsController < ApplicationController
-  before_action :authorized, only: [:index]
+  before_action :authorize
 
   def index
     @workouts = Workout.all
